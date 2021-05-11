@@ -1,13 +1,18 @@
 // helper methods and matchers for testing framework
 "use strict";
 
-function expect(a) {
+function describe(title, body) {
+  console.log(title);
+  body();
+}
+
+function expect(actual) {
   return {
-    toEqual: function(b) {
-      if (a == b) {
-        console.log("Pass");
+    toEqual: function(expected) {
+      if (actual === expected) {
+        console.log("PASS");
       } else {
-        console.log("Fail");
+        console.log(`FAIL: expected ${actual} to equal ${expected}`);
       };
     }
   };
