@@ -1,12 +1,13 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function() {
+  
+  
   function createNote(text) {
     let note = new Note(text);
     return note;
   };
 
-  debugger;
 
   function appendNote(newNote) {
     // let inputText = note.getNote();
@@ -14,11 +15,14 @@ document.addEventListener("DOMContentLoaded", function() {
   };
   console.log('hi');
   
-  document.querySelector('#add-note').addEventListener('submit', function(event) {
-    // event.preventDefault();
-    const enteredText = document.querySelector('#note-text').value;
-  });
+  let submitButton = document.getElementById('add-note');
+  let enteredText = document.querySelector('#note-text');
+  submitButton.addEventListener('click', createNote(enteredText));
+  //   event.preventDefault();
+  //   enteredText = document.querySelector('#note-text');
+  // });
     console.log('hi there');
+    console.log(enteredText);
     // let newNote = createNote(enteredText);
     // appendNote(newNote);
 });
