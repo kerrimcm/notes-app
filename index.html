@@ -7,7 +7,8 @@
   <script src="spec/testLibrary.js"></script>
   <script src="src/note.js"></script>
   <script src="spec/noteSpec.js"></script>
-  <title>Document</title>
+  <script src="src/interface.js"></script>
+  <title>Notes</title>
 </head>
 <body>
 <h1>
@@ -19,11 +20,13 @@
 </h2>
 <div>
   <form>
-    <textarea id="notetext" name="notetext" rows="4" cols="50"></textarea>
+    <textarea id="note-text" name="noteText" rows="4" cols="50"></textarea>
     <br>
-    <input type="submit" value="submit">
+    <input type="submit" id="add-note" value="Add Note">
   </form>
 </div>
+
+<ul id="noteList"> </ul>
 
 </body>
 
