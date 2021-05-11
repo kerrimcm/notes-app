@@ -4,19 +4,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="spec/testLibrary.js"></script>
+  <script src="src/note.js"></script>
+  <script src="spec/noteSpec.js"></script>
   <title>Document</title>
 </head>
 <body>
-  <script src="spec/testLibrary.js"></script>
-  <!-- <script src="src/notes.js"></script> -->
-  <script src="spec/notesSpec.js"></script>
-</body>
-<!-- <script>
-  var httpServer = require("http-server");
-  var path = require("path");
+<h1>
+  Notes App
+</h1>
+<br>
+<h2>
+  Enter text below:
+</h2>
+<div>
+  <form>
+    <textarea id="notetext" name="notetext" rows="4" cols="50"></textarea>
+    <br>
+    <input type="submit" value="submit">
+  </form>
+</div>
 
-  var pathToHtmlAndJsFiles = path.join(__dirname, "path/from/current/dir/to/html/and/js/files");
-  var server = httpServer.createServer({ root: pathToHtmlAndJsFiles });
-  server.listen(3000);
-</script> -->
+</body>
+
 </html>
