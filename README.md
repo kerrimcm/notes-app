@@ -52,12 +52,12 @@ I can use shortcodes like `:fire:` that get converted into emojis like 🔥
 As a programmer
 So I can remember what I took down
 I can refresh the page and still see my notes
-
-  ```
+```
 <br>
 
 ### Sequence diagram modelling how the interface might work
   <br>
+  [diagram](https://github.com/fwill22/notes-app/blob/master/public/images/Diagram%20plan.png)
 	
 ------------
 ## Tests
