@@ -57,7 +57,7 @@ I can refresh the page and still see my notes
 
 ### Sequence diagram modelling how the interface might work
   <br>
-  [diagram](https://github.com/fwill22/notes-app/blob/master/public/images/Diagram%20plan.png)
+  ![diagram](https://github.com/fwill22/notes-app/blob/master/public/images/Diagram%20plan.png)
 	
 ------------
 ## Tests
@@ -69,6 +69,6 @@ How to run the tests
 
 ------------
 ## Designed by:
-* Finn Williamson 	| GitHub <br>
-* Kerri McMahon 	| GitHub <br>
-* Cynthia Anyaeriuba	| GitHub <br>
+* Finn Williamson 	| [GitHub](https://github.com/fwill22) <br>
+* Kerri McMahon 	| [GitHub](https://github.com/kerrimcm)<br>
+* Cynthia Anyaeriuba	| [GitHub](https://github.com/C-A-Tech) <br>
