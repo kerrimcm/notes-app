@@ -1,24 +1,24 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function() {
-  function createNote(text) {
-    let note = new Note(text);
-    return note;
-  };
 
-  debugger;
 
-  function appendNote(newNote) {
-    // let inputText = note.getNote();
-    document.querySelector('#note-list').innerHTML = newNote;
-  };
-  console.log('hi');
-  
-  document.querySelector('#add-note').addEventListener('submit', function(event) {
-    // event.preventDefault();
-    const enteredText = document.querySelector('#note-text').value;
-  });
-    console.log('hi there');
-    // let newNote = createNote(enteredText);
-    // appendNote(newNote);
+
+let submitText = document.querySelector('#add-note');
+
+submitText.addEventListener('submit', (event) => {
+  event.preventDefault();
+  let inputText = document.querySelector('#note-text').value;
+  let newNote = createNote(inputText);
+  document.querySelector('#note-list').innerText = newNote.getNote();
+})
+
+function createNote(inputText) {
+  let newNote = new Note(inputText);
+  return newNote;
+}
+
+
+
+
 });
