@@ -14,8 +14,8 @@ submitText.addEventListener('submit', (event) => {
 })
 
 function createNote(inputText) {
-  let newNote = new Note(inputText);
-  return newNote;
+  let note = new Note(inputText);
+  return note;
 }
 
 
