@@ -3,8 +3,13 @@
 document.addEventListener("DOMContentLoaded", function() {
   
   
-  function createNote(text) {
-    let note = new Note(text);
+
+  function createNote() {
+    
+    let enteredText = document.querySelector("#noteText");
+    let note = new Note(enteredText);
+    let noteText = note.getNote();
+    appendNote(noteText);
     return note;
   };
 
@@ -13,16 +18,16 @@ document.addEventListener("DOMContentLoaded", function() {
     // let inputText = note.getNote();
     document.querySelector('#note-list').innerHTML = newNote;
   };
-  console.log('hi');
+ 
   
-  let submitButton = document.getElementById('add-note');
-  let enteredText = document.querySelector('#note-text');
-  submitButton.addEventListener('click', createNote(enteredText));
+  let submitButton = document.getElementById('addNote');
+  let enteredText = document.querySelector('#noteText');
+  console.log(enteredText.value);
+  submitButton.addEventListener('click', createNote());
   //   event.preventDefault();
   //   enteredText = document.querySelector('#note-text');
   // });
-    console.log('hi there');
-    console.log(enteredText);
+
     // let newNote = createNote(enteredText);
     // appendNote(newNote);
 });
