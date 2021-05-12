@@ -10,7 +10,7 @@ submitText.addEventListener('submit', (event) => {
   event.preventDefault();
   let inputText = document.querySelector('#note-text').value;
   let newNote = createNote(inputText);
-  document.querySelector('#note-list').innerText = newNote.getNote();
+  appendToList(newNote);
 })
 
 function createNote(inputText) {
@@ -18,7 +18,13 @@ function createNote(inputText) {
   return note;
 }
 
-
-
+function appendToList(newNote) {
+  // create element <li>note object</li> + id= n++ 
+  let listItem = document.createElement("LI");
+  let noteText = document.createTextNode(newNote.getNote());
+  listItem.appendChild(noteText);
+  document.getElementById("note-list").appendChild(listItem);
+}
 
 });
+
