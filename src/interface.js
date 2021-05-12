@@ -20,8 +20,9 @@ function createNote(inputText) {
 
 function appendToList(newNote) {
   // create element <li>note object</li> + id= n++ 
+  let shortNote = newNote.twentyChars;
   let listItem = document.createElement("LI");
-  let noteText = document.createTextNode(newNote.getNote());
+  let noteText = document.createTextNode(shortNote);
   listItem.appendChild(noteText);
   document.getElementById("note-list").appendChild(listItem);
 }
