@@ -56,7 +56,6 @@ I can refresh the page and still see my notes
 <br>
 
 ### Sequence diagram modelling how the interface might work
-  <br>
 ![diagram](https://github.com/fwill22/notes-app/blob/master/public/images/Diagram%20plan.png)
 	
 ------------
