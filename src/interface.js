@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // create element <li>note object</li> + id= n++ 
     let shortNote = newNote.twentyChars;
     let listItem = document.createElement("LI");
-    let noteText = document.createTextNode(shortNote);
+    let noteText = document.createTextNode(shortNote); //not currently in use
     let link = document.createElement('a');
     
     link.textContent = shortNote;
