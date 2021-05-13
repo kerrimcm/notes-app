@@ -9,12 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
   submitText.addEventListener('submit', (event) => {
     event.preventDefault();
     let inputText = document.querySelector('#note-text').value;
-    const newNote = createNote(inputText);
-    console.log(newNote);
-    console.log(2)
-    //appendToList(newNote);
-    getEmojiData(newNote.getNote());
-    console.log(5)
+    getEmojiData(inputText);
+    console.log(3)
   })
 
   function createNote(inputText) {
@@ -23,17 +19,17 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function appendToList(newNote) {
-    //let shortNote = newNote.twentyChars;
+    let shortNote = newNote.twentyChars;
     let listItem = document.createElement("LI");
     let link = document.createElement('a');
     
-    link.textContent = newNote;
+    link.textContent = shortNote;
     link.href = '#';
-    link.id = newNote;
+    link.id = shortNote;
 
     listItem.appendChild(link);
     document.getElementById("note-list").appendChild(listItem); 
-    console.log(3)
+    console.log(5)
   }
 
   function getEmojiData(inputText) {
@@ -46,14 +42,17 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     .then((response) => response.json())
     .then(data => {
-      appendToList(data.emojified_text);
+      console.log(7)
+      const newNote = createNote(data.emojified_text);
       console.log(4)
+      appendToList(newNote)
+      console.log(6)
     })
     .catch((error) => {
       console.error('Error:', error);
     });
   }
-  console.log(6)
+  console.log(2)
 });
 
 // function storeNoteToArray(newNote) {
