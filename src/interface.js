@@ -17,10 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function appendToList(newNote) {
-    // create element <li>note object</li> + id= n++ 
     let shortNote = newNote.twentyChars;
     let listItem = document.createElement("LI");
-    let noteText = document.createTextNode(shortNote); //not currently in use
     let link = document.createElement('a');
     
     link.textContent = shortNote;
@@ -31,3 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("note-list").appendChild(listItem); 
   }
 });
+
+// create element <li>note object</li> + id= n++ 
+// let noteText = document.createTextNode(shortNote); //not currently in use
