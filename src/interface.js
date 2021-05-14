@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
   listOfNotes.addEventListener('click', (event) => {
     console.log(1)
     console.log(event.target.id)
-    //here I am selecting the id of the clicked note, as opposed to waiting for the url to change first
+    
     let clickedNoteId = event.target.id
     makeUrlChangeShowFullNote(clickedNoteId);
     console.log(2)
@@ -74,28 +74,28 @@ document.addEventListener("DOMContentLoaded", function() {
     showNote(clickedNoteId);
     console.log(6)
   };
-//removed this function because we are no longer getting the note from the URL because this means the link has to be clicked twice.
-  // function getNoteFromUrl(location) {
-  //   console.log(7)
-  //   return location.hash.split("#")[1];
-  // };
+
 
   function showNote(id) {
     console.log(8)
     console.log(id)
     let newBody = document.getElementById("page")
-    let closeButton = document.createElement("BUTTON");
+    let space = document.createElement("BR");
+    let closeButton = document.createElement("a");
     closeButton.innerHTML = "Close";
+    closeButton.id = "close-button";
+    closeButton.href = "";
     newBody.innerHTML = noteArray[id].text;
+    newBody.appendChild(space);
     newBody.appendChild(closeButton);
     console.log(9)
   };
 
+  // document.addEventListener('click', (event) => {
+  //   if(event.target.id == "close-button"){
+  //   let currentPage = document.getElementById("page")
+  //   currentPage.innerHTML = homePage
+  //   }
+  // });
 });
 
-// document.addEventListener('click', (event) => {
-//   console.log(event.target.tagName)
-//   if(event.target.tagName == "A"){
-//   makeUrlChangeShowFullNote();
-//   }
-// });
