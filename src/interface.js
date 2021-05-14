@@ -54,48 +54,48 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
   
-  listOfNotes.addEventListener('click', () => {
-    makeUrlChangeShowFullNote();
+  listOfNotes.addEventListener('click', (event) => {
+    console.log(1)
+    console.log(event.target.id)
+    //here I am selecting the id of the clicked note, as opposed to waiting for the url to change first
+    let clickedNoteId = event.target.id
+    makeUrlChangeShowFullNote(clickedNoteId);
+    console.log(2)
   });
 
-  function makeUrlChangeShowFullNote() {
-    document.addEventListener("hashchange", showNoteForCurrentPage());
+  function makeUrlChangeShowFullNote(clickedNoteId) {
+    console.log(3)
+    document.addEventListener("hashchange", showNoteForCurrentPage(clickedNoteId));
+    console.log(4)
   };
 
-  function showNoteForCurrentPage() {
-    showNote(getNoteFromUrl(document.location));
+  function showNoteForCurrentPage(clickedNoteId) {
+    console.log(5)
+    showNote(clickedNoteId);
+    console.log(6)
   };
-
-  function getNoteFromUrl(location) {
-    return location.hash.split("#")[1];
-  };
+//removed this function because we are no longer getting the note from the URL because this means the link has to be clicked twice.
+  // function getNoteFromUrl(location) {
+  //   console.log(7)
+  //   return location.hash.split("#")[1];
+  // };
 
   function showNote(id) {
+    console.log(8)
+    console.log(id)
     let newBody = document.getElementById("page")
     let closeButton = document.createElement("BUTTON");
     closeButton.innerHTML = "Close";
     newBody.innerHTML = noteArray[id].text;
     newBody.appendChild(closeButton);
+    console.log(9)
   };
 
 });
 
-
-
-
-
-
-// function storeNoteToArray(newNote) {
-//   noteList.push(newNote);
-// };
-
-// let linkID = document.querySelectorAll('#note-list');
-// linkID.forEach(() => {
-//   document.getElementById(noteObject.id)
-//   // addEventListener("hashchange", function()
+// document.addEventListener('click', (event) => {
+//   console.log(event.target.tagName)
+//   if(event.target.tagName == "A"){
+//   makeUrlChangeShowFullNote();
+//   }
 // });
-
-// const noteObject = new Note(inputText, id);
-
-// create element <li>note object</li> + id= n++ 
-// let noteText = document.createTextNode(shortNote); //not currently in use
