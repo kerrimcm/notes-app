@@ -11,6 +11,12 @@ document.addEventListener("DOMContentLoaded", function() {
     getEmojiData(inputText);
   })
 
+  // let linkID = document.querySelectorAll('#note-list');
+  // linkID.forEach() => {
+  //   addEventListener("hashchange", function()
+  // });
+
+
   function createNote(inputText, id) {
     let note = new Note(inputText, id);
     idCount++
@@ -48,13 +54,22 @@ document.addEventListener("DOMContentLoaded", function() {
       console.error('Error:', error);
     });
   }
+
+
+
+  function displayFullnote() {
+
+  }
+
+
 });
 
 // function storeNoteToArray(newNote) {
 //   noteList.push(newNote);
 // };
 
-// function displayFullnote() {
+
+
 
 
 // create element <li>note object</li> + id= n++ 
