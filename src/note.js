@@ -1,8 +1,9 @@
 "use strict";
 class Note {
-  constructor(text) {
+  constructor(text, id) {
     this.text = text
     this.twentyChars = this._getTwenty(text)
+    this.id = id
   }
 
   getNote() {

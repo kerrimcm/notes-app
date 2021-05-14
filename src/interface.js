@@ -3,18 +3,17 @@
 document.addEventListener("DOMContentLoaded", function() {
 
   let submitText = document.querySelector('#add-note');
-  // const noteList = [];
-  console.log(1)
+  let idCount = 0
 
   submitText.addEventListener('submit', (event) => {
     event.preventDefault();
     let inputText = document.querySelector('#note-text').value;
     getEmojiData(inputText);
-    console.log(3)
   })
 
-  function createNote(inputText) {
-    let note = new Note(inputText);
+  function createNote(inputText, id) {
+    let note = new Note(inputText, id);
+    idCount++
     return note;
   }
 
@@ -22,14 +21,14 @@ document.addEventListener("DOMContentLoaded", function() {
     let shortNote = newNote.twentyChars;
     let listItem = document.createElement("LI");
     let link = document.createElement('a');
-    
+    let id = newNote.id;
+
     link.textContent = shortNote;
-    link.href = '#';
-    link.id = shortNote;
+    link.href = `#${id}`;
+    link.id = id;
 
     listItem.appendChild(link);
     document.getElementById("note-list").appendChild(listItem); 
-    console.log(5)
   }
 
   function getEmojiData(inputText) {
@@ -42,17 +41,13 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     .then((response) => response.json())
     .then(data => {
-      console.log(7)
-      const newNote = createNote(data.emojified_text);
-      console.log(4)
+      const newNote = createNote(data.emojified_text, idCount);
       appendToList(newNote)
-      console.log(6)
     })
     .catch((error) => {
       console.error('Error:', error);
     });
   }
-  console.log(2)
 });
 
 // function storeNoteToArray(newNote) {
