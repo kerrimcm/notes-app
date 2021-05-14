@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   let submitText = document.querySelector('#add-note');
   let idCount = 0
+  let listOfNotes = document.querySelector('#note-list');
+  const noteArray = [];
+
+  console.log(noteArray);
 
   submitText.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -11,14 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
     getEmojiData(inputText);
   })
 
-  // let linkID = document.querySelectorAll('#note-list');
-  // linkID.forEach() => {
-  //   addEventListener("hashchange", function()
-  // });
-
-
   function createNote(inputText, id) {
     let note = new Note(inputText, id);
+    noteArray.push(note);
     idCount++
     return note;
   }
@@ -54,23 +53,49 @@ document.addEventListener("DOMContentLoaded", function() {
       console.error('Error:', error);
     });
   }
+  
+  listOfNotes.addEventListener('click', () => {
+    makeUrlChangeShowFullNote();
+  });
 
+  function makeUrlChangeShowFullNote() {
+    document.addEventListener("hashchange", showNoteForCurrentPage());
+  };
 
+  function showNoteForCurrentPage() {
+    showNote(getNoteFromUrl(document.location));
+  };
 
-  function displayFullnote() {
+  function getNoteFromUrl(location) {
+    return location.hash.split("#")[1];
+  };
 
-  }
-
+  function showNote(id) {
+    let newBody = document.getElementById("page")
+    let closeButton = document.createElement("BUTTON");
+    closeButton.innerHTML = "Close";
+    newBody.innerHTML = noteArray[id].text;
+    newBody.appendChild(closeButton);
+  };
 
 });
+
+
+
+
+
 
 // function storeNoteToArray(newNote) {
 //   noteList.push(newNote);
 // };
 
+// let linkID = document.querySelectorAll('#note-list');
+// linkID.forEach(() => {
+//   document.getElementById(noteObject.id)
+//   // addEventListener("hashchange", function()
+// });
 
-
-
+// const noteObject = new Note(inputText, id);
 
 // create element <li>note object</li> + id= n++ 
 // let noteText = document.createTextNode(shortNote); //not currently in use
