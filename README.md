@@ -5,7 +5,7 @@ High level overview description of the group project
 
 ## App functionality: 
 ### How to use 
-Description of user flow and an explanation fo how it all works
+Description of user flow and an explanation of how it all works
 
 <br>
 
@@ -13,6 +13,17 @@ Description of user flow and an explanation fo how it all works
 [ x ] check list
 
 ### Screenshots of the app (user flow/UI)
+<details open>
+<summary>Without styling</summary>
+<br>
+[images]
+</details>
+
+<details open>
+<summary>With styling</summary>
+<br>
+[images]
+</details>
 
 ----------------
 
