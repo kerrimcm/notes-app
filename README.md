@@ -12,7 +12,7 @@ A week-long group project to create a single-page web app in vanilla JS - includ
 
 ### Features list
 * A user can enter a note into a text box and see the first 20 characters of the note saved
-* If they type something like :fire: the note will make a call to an external API and convert it to an emoji 🔥
+* If they type something like `:fire:` the note will make a call to an external API and convert it to an emoji 🔥
 * The user can click on the note to see the full note displayed
 
 ### Screenshot 
