@@ -1,33 +1,26 @@
  
-High level overview description of the group project
-
+# Notes App
 --------------
+
+A week-long group project to create a single-page web app in vanilla JS - including the creation of our own testing library.
 
 ## App functionality: 
 ### How to use 
-Description of user flow and an explanation of how it all works
+1. `git clone` this repo
+2. `cd` into the directory 
+3. Run `open index.html` to use the app
+4. You can see the tests passing in the JS console
 
 <br>
 
 ### Features list
-[ x ] check list
+[ x ] A user can enter a note into a text box and see the first 20 characters of the note saved
+[ x ] If they type something like :fire: the note will make a call to an external API and convert it to an emoji 🔥
+[ x ] The user can click on the note to see the full note displayed
 
-### Screenshots of the app (user flow/UI)
-<details open>
-<summary>Without styling</summary>
-<br>
-[images]
-</details>
-
-<details open>
-<summary>With styling</summary>
-<br>
-[images]
-</details>
-
+### Screenshot 
 ----------------
-
-## Process notes
+![notes app]()
 
 ### Goals / Learning objectives
 * Build a frontend single-page app using only pure Javascript.
@@ -58,11 +51,6 @@ I can see the full text of an individual note on its own page
 As a programmer
 So I can record notes with fun little pictures
 I can use shortcodes like `:fire:` that get converted into emojis like 🔥
-
-
-As a programmer
-So I can remember what I took down
-I can refresh the page and still see my notes
 ```
 <br>
 
@@ -72,10 +60,7 @@ I can refresh the page and still see my notes
 ------------
 ## Tests
 
-Explanation of design process 
-What does it include, why?  how do you use it? What is it testing
-
-How to run the tests
+Our test helpers are stored in the folder `testLibrary.js` and our tests can be seen passing in the JS console when you open the app
 
 ------------
 ## Designed by:
