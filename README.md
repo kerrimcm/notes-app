@@ -1,7 +1,6 @@
  
 # Notes App
 --------------
-
 A week-long group project to create a single-page web app in vanilla JS - including the creation of our own testing library.
 
 ## App functionality: 
@@ -11,16 +10,13 @@ A week-long group project to create a single-page web app in vanilla JS - includ
 3. Run `open index.html` to use the app
 4. You can see the tests passing in the JS console
 
-<br>
-
 ### Features list
 [ x ] A user can enter a note into a text box and see the first 20 characters of the note saved
 [ x ] If they type something like :fire: the note will make a call to an external API and convert it to an emoji 🔥
 [ x ] The user can click on the note to see the full note displayed
 
 ### Screenshot 
-----------------
-![notes app]()
+![notes app](./public/images/screenshot.png)
 
 ### Goals / Learning objectives
 * Build a frontend single-page app using only pure Javascript.
@@ -29,9 +25,7 @@ A week-long group project to create a single-page web app in vanilla JS - includ
 
 ### Planning
 
-<br>
-
-  ### User stories
+### User stories
   ```
 As a programmer
 So I can find the one I want
@@ -52,7 +46,6 @@ As a programmer
 So I can record notes with fun little pictures
 I can use shortcodes like `:fire:` that get converted into emojis like 🔥
 ```
-<br>
 
 ### Sequence diagram modelling how the interface might work
 ![diagram](https://github.com/fwill22/notes-app/blob/master/public/images/Diagram%20plan.png)
